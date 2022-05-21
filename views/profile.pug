@@ -1,0 +1,90 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Profile
+    link(rel='stylesheet', href='../css/header.css')
+  body
+    img.uppergradient(src='../Assets/uPPERGRADIENT.svg', alt='uppergradient')
+    img.lowergradient(src='../Assets/Lovergradient.svg', alt='lowergradient')
+    // Header section
+    .header
+      .header_logo
+        img(src='../Assets/Logo.svg', alt='Logo')
+      .header_name MONEY BANK
+      a.header_home(href='/') Home
+      a.header_transfer(href='/customers') Transfer
+      a.header_customers(href='/customers') Customers
+      a.header_history.active(href='#') Account
+    // Outer box
+    .outerbox_acc
+      .outerbox_acc_top
+        .outerbox_acc_top_allcustomers.outerbox_acc_top_allcustomers_acc
+          | Account Information
+      // Account section
+      .outerbox_acc_details
+        .outerbox_acc_info
+          // Profile
+          .outerbox_acc_info_left
+            img.outerbox_acc_info_left_img(src=`../Assets/profile${cstmrupdatedata.user_id}.jpg`, alt=`profile${cstmrupdatedata.user_id}.jpg`)
+            .outerbox_acc_info_left_name= cstmrupdatedata.name
+          // Acc details
+          .outerbox_acc_info_right
+            .outerbox_acc_info_right_row1
+              .outerbox_acc_info_right_row1_text Account No:
+              .outerbox_acc_info_right_row1_accno= cstmrupdatedata.AcNo
+              .outerbox_acc_info_right_row1_text Account ID:
+              .outerbox_acc_info_right_row1_accid= cstmrupdatedata._id 
+                
+            .outerbox_acc_info_right_row2
+              .outerbox_acc_info_right_row2_text Mobile No:
+              .outerbox_acc_info_right_row2_mobileno= cstmrupdatedata.MobileNo
+              
+            .outerbox_acc_info_right_row3
+              .outerbox_acc_info_right_row3_text Email Id:
+              .outerbox_acc_info_right_row3_emailid= cstmrupdatedata.EmailId
+                
+            .outerbox_acc_info_right_row4
+              .outerbox_acc_info_right_row4_text Balence:
+              .outerbox_acc_info_right_row4_balenceamt= `${cstmrupdatedata.Balance}$`
+        // app section
+        .outerbox_acc_app
+          .outerbox_acc_app_send_box
+            span.outerbox_acc_app_send_box_send Send Money
+            form.form(role='form',action=`/send-money/${cstmrupdatedata._id}?_method=patch`, method="post")
+              .form__group
+                input#sendAccount_no.form__input(type='text', placeholder='Account ID',name="account_id", required='')
+              .form__group
+                input#sendamount.form__input(type='amount',name='amount', placeholder='Amount', required='')
+                button.btnform.btnform-white.btnform-white_profile(type="submit" name='submit') Send
+          .outerbox_acc_app_request_box
+            span.outerbox_acc_app_request_box_request Request Money
+            form.form(role='form',action=`/request-money/${cstmrupdatedata._id}?_method=patch`, method="post")
+              .form__group
+                input#reqAccount_no.form__input(type='text', placeholder='Account ID', name="account_id",required='')
+              .form__group
+                input#reqamount.form__input(type='amount', placeholder='Amount',name='amount', required='')
+                button.btnform.btnform-white.btnform-white_profile(type="submit" name='submit') Request
+      .outerbox_top_profile
+        .outerbox_top_profile_allcustomers Recent Transactions
+        .outerbox_top_profile_table
+          .cstmer Transacted To
+          .balencer Balence Left 
+          .last_transaction Ammount
+          .date Date
+          .Account_no Transaction No
+        .list_profile
+          each x in cstmrupdatedata.RecentTransactions.reverse().slice(0,8)
+            .list_profile_list-item
+              img.list_profile_image(src=`../Assets/profile${x.TransferedToUserId}.jpg`)
+              .profile= x.TransferedTo 
+              .balence_data= `${x.BalenceLeft}$`
+              .list_profile_last_transaction_data
+                .list_profile_last_transaction_data_circle
+                  div(class = "list_profile_last_transaction_data_circle_" + x.Type) sa
+                .last_profile_transaction_data_ammount= ` ${x.Amount}$`
+              .date= x.Date
+              .account= `TR${x.transactionno}`
+            

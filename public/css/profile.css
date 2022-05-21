@@ -1,0 +1,198 @@
+.outerbox_acc {
+  margin: 10px auto 30px;
+  max-width: 73%;
+  min-height: min-content;
+  height: 85vh;
+  background: rgba(55, 89, 116, 0.2);
+  border-radius: 18px;
+  display: grid;
+  grid-template-rows: auto repeat(4, 1fr) 2rem;
+  padding: 1rem 2rem 0 2rem; }
+  .outerbox_acc_top_profile {
+    display: grid;
+    grid-template-rows: auto max-content;
+    border-bottom: 3px solid #203f58; }
+    .outerbox_acc_top_profile_allcustomers {
+      width: fit-content;
+      border-bottom: 2px solid #c9a750;
+      font-size: 24px;
+      margin-bottom: 1rem; }
+      .outerbox_acc_top_profile_allcustomers_acc {
+        margin-bottom: 0.5rem; }
+  .outerbox_acc_details {
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: 6fr 5fr;
+    grid-row: 2 / 3;
+    margin-top: 1rem; }
+  .outerbox_acc_info {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    display: grid;
+    align-items: center;
+    height: fit-content;
+    padding: 0 1rem 0 0;
+    grid-template-columns: minmax(max-content, 3fr) minmax(max-content, 4fr);
+    grid-column-gap: 1rem; }
+    .outerbox_acc_info_left {
+      max-width: 60%;
+      height: 100%;
+      padding: 1rem;
+      text-align: center;
+      display: grid;
+      grid-template-rows: max-content 1fr;
+      align-items: center; }
+      .outerbox_acc_info_left_img {
+        border-radius: 50%;
+        width: 100%;
+        transform: translateY(1rem); }
+      .outerbox_acc_info_left_name {
+        transform: translateY(5px); }
+    .outerbox_acc_info_right {
+      display: grid;
+      grid-template-rows: 1rem repeat(5, 1fr); }
+      .outerbox_acc_info_right_row1 {
+        display: grid;
+        grid-template-columns: 4fr 6fr;
+        grid-column-gap: 1rem;
+        grid-row: 2/3; }
+        .outerbox_acc_info_right_row1_text {
+          color: #c9a750; }
+      .outerbox_acc_info_right_row2 {
+        display: grid;
+        grid-template-columns: 4fr 6fr;
+        grid-column-gap: 1rem;
+        grid-row: 3/4; }
+        .outerbox_acc_info_right_row2_text {
+          color: #c9a750; }
+      .outerbox_acc_info_right_row3 {
+        display: grid;
+        grid-template-columns: 4fr 6fr;
+        grid-column-gap: 1rem;
+        grid-row: 4/5; }
+        .outerbox_acc_info_right_row3_text {
+          color: #c9a750; }
+      .outerbox_acc_info_right_row4 {
+        display: grid;
+        grid-template-columns: 4fr 6fr;
+        grid-column-gap: 1rem;
+        grid-row: 6/7; }
+        .outerbox_acc_info_right_row4_text {
+          color: #c9a750;
+          font-size: 16px; }
+        .outerbox_acc_info_right_row4_balenceamt {
+          font-size: 22px; }
+  .outerbox_acc_app {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 0.5rem 1rem;
+    height: inherit; }
+    .outerbox_acc_app_send_box {
+      margin-bottom: 0.6rem; }
+      .outerbox_acc_app_send_box_send {
+        font-size: 18px;
+        color: #c9a750;
+        margin: 0.6rem 0; }
+    .outerbox_acc_app_request_box_request {
+      font-size: 18px;
+      color: #c9a750;
+      margin: 0.6rem 0; }
+  .outerbox_acc .list_profile {
+    display: grid;
+    grid-row-gap: 1rem;
+    overflow: hidden;
+    grid-row: 4/-1;
+    overflow-y: scroll;
+    height: 45vh;
+    padding: 0 1.5rem;
+    align-content: flex-start;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none; }
+    .outerbox_acc .list_profile_list-item {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      height: 4rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      grid-template-columns: min-content repeat(5, minmax(min-content, 1fr));
+      font-size: 16px;
+      transition: all 0.2s; }
+      .outerbox_acc .list_profile_list-item:hover {
+        transform: scale(1.03);
+        text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+        overflow-x: visible; }
+    .outerbox_acc .list_profile_image {
+      width: 40px;
+      border-radius: 50%;
+      padding: 1rem; }
+    .outerbox_acc .list_profile_last_transaction_data {
+      display: grid;
+      grid-template-columns: min-content min-content; }
+      .outerbox_acc .list_profile_last_transaction_data_circle {
+        margin: 0 5px 0 0;
+        width: 15px;
+        height: 15px;
+        font-size: 0;
+        border-radius: 50%; }
+      .outerbox_acc .list_profile_last_transaction_data_circle_rcv {
+        margin: 0 5px 0 0;
+        width: 15px;
+        height: 15px;
+        font-size: 0;
+        border-radius: 50%;
+        background-color: green; }
+      .outerbox_acc .list_profile_last_transaction_data_circle_send {
+        margin: 0 5px 0 0;
+        width: 15px;
+        height: 15px;
+        font-size: 0;
+        border-radius: 50%;
+        background-color: red; }
+  .outerbox_acc .list_profile::-webkit-scrollbar {
+    display: none; }
+  .outerbox_acc .outerbox_top_profile {
+    display: grid;
+    grid-row: 3/4;
+    grid-template-rows: auto max-content;
+    border-bottom: 3px solid #203f58; }
+    .outerbox_acc .outerbox_top_profile_allcustomers {
+      width: fit-content;
+      border-bottom: 2px solid #c9a750;
+      font-size: 16px;
+      margin-top: 10px; }
+    .outerbox_acc .outerbox_top_profile_table {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(min-content, 1fr));
+      font-size: 14px;
+      grid-column-gap: 3rem;
+      margin: 10px 5px; }
+  .outerbox_acc .form {
+    width: 100%;
+    position: relative;
+    padding-top: 0.2rem;
+    color: #203f58; }
+    .outerbox_acc .form__group:not(:last-child) {
+      margin-bottom: 0.2rem; }
+    .outerbox_acc .form__group {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%; }
+    .outerbox_acc .form__input {
+      border: none;
+      font-size: 0.8rem;
+      font-family: inherit;
+      padding: 0.3rem 1rem;
+      border-radius: 5px;
+      color: #203f58;
+      background-color: rgba(255, 255, 255, 0.9);
+      width: 50%;
+      display: block;
+      color: inherit; }
+      .outerbox_acc .form__input:focus {
+        outline: none;
+        color: #203f58;
+        border-bottom: 3px solid #c9a750; }
+      .outerbox_acc .form__input:focus:invalid {
+        border-bottom: 3px solid #ed3b3b; }

@@ -1,0 +1,107 @@
+.main {
+  display: grid;
+  grid-template-columns: 4rem 1fr 1fr 4rem;
+  height: 80vh;
+  // Left side
+
+  &_left_side {
+    grid-column: 2/3;
+    display: grid;
+    padding: 0 0 0 4.5rem;
+
+    grid-template-rows: 1fr max-content max-content max-content max-content 1fr;
+    // grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 0.625rem;
+    &_commentbox_1 {
+      grid-template-columns: max-content 1fr;
+      display: grid;
+      grid-row: 2/3;
+      grid-column-gap: 0.3125rem;
+    }
+
+    &_span_item {
+      width: 3.125rem;
+      height: 0.1875rem;
+      font-size: 0px;
+      grid-column: 1/2;
+      grid-row: 2/3;
+      background-color: #c9a750;
+      transform: translateY(-0.625rem);
+    }
+    &_comment_1 {
+      font-size: 0.875rem;
+      grid-column: 1/2;
+      grid-column: 2/3;
+    }
+
+    &_slogan {
+      grid-row: 3/4;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+    &_commentbox_2 {
+      grid-row: 4/5;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    &_button {
+      grid-row: 5/6;
+      display: grid;
+      grid-template-columns: max-content 1fr;
+
+      &_btn {
+        grid-column: 1/2;
+        background-color: #c9a750;
+        font-size: 1.375rem;
+        border-radius: 0.3125rem;
+        padding: 0.3125rem 0.3125rem;
+        margin-top: 1.25rem;
+      }
+    }
+  }
+
+  //Right side
+
+  &_right_side {
+    grid-column: 3/4;
+    position: relative;
+    display: grid;
+    &_composition {
+      position: relative;
+      height: fit-content;
+
+      &__photo {
+        max-width: 45%;
+        box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+        position: absolute;
+        z-index: 10;
+        transition: all 0.2s;
+        outline-offset: 0.7rem;
+        border-radius: 0.5rem;
+
+        &--p1 {
+          left: 0rem;
+          top: 6rem;
+        }
+        &--p2 {
+          left: 10rem;
+          top: 15rem;
+        }
+        &--p3 {
+          left: 22rem;
+          top: 23rem;
+        }
+
+        &:hover {
+          transform: scale(1.05) translateY(0.125rem);
+          z-index: 20;
+          box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+          //   outline: 0.5rem solid $color-primary;
+        }
+      }
+      &:hover &__photo:not(:hover) {
+        transform: scale(0.95);
+      }
+    }
+  }
+}

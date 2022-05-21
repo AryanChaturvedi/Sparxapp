@@ -1,0 +1,98 @@
+.btn:link,
+.btn:visited {
+  grid-row: 5/6;
+  width: fit-content;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 0.3125rem 1.25rem;
+  display: inline-block;
+  border-radius: 0.4375rem;
+  transition: all 0.25s;
+  position: relative;
+  animation: moveinbottom 0.5s ease-out 0.6s;
+  animation-fill-mode: backwards; /* applies all property of 0% before starting animations*/
+}
+.btn:hover {
+  transform: translateY(0.125rem);
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(0.1875rem);
+  box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.2);
+}
+.btn-white {
+  background-color: #c9a750;
+  color: rgba(white, 0.8);
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+  &_profile {
+    margin-top: 0;
+  }
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.625rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn-white::after {
+  background-color: #c9a750;
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btnform {
+  grid-row: 5/6;
+  width: fit-content;
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 0.3125rem 1.25rem;
+  display: inline-block;
+  border-radius: 0.4375rem;
+  transition: all 0.25s;
+  border: none;
+  position: relative;
+  animation: moveinbottom 0.5s ease-out 0.6s;
+  animation-fill-mode: backwards; /* applies all property of 0% before starting animations*/
+}
+.btnform:hover {
+  transform: translateY(0.125rem);
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.2);
+}
+.btnform:active {
+  transform: translateY(0.1875rem);
+  box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.2);
+}
+.btnform-white {
+  background-color: #c9a750;
+  color: rgba(white, 0.8);
+  font-size: 1.125rem;
+  margin-top: 1.5rem;
+  &_profile {
+    margin-top: 0;
+  }
+}
+.btnform::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btnform:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}

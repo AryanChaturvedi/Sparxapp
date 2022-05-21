@@ -1,0 +1,51 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Home
+    link(rel='stylesheet', href='css/header.css')
+  body
+    img.uppergradient(src='Assets/uPPERGRADIENT.svg', alt='uppergradient')
+    img.lowergradient(src='Assets/Lovergradient.svg', alt='lowergradient')
+    // Header section
+    .header
+      .header_logo
+        img(src='Assets/Logo.svg', alt='Logo')
+      .header_name MONEY BANK
+      a.header_home.active(href='/') Home
+      a.header_transfer(href='/customers') Transfer
+      a.header_customers(href='/customers') Customers
+      a.header_history(href='#') Account
+    .main
+      // Left side main content
+      .main_left_side
+        .main_left_side_commentbox_1
+          span.main_left_side_span_item
+          |  
+          .main_left_side_comment_1
+            | Transact Anytime Anywhere
+        .main_left_side_slogan
+          | New Bank 
+          br
+          For a New Age
+        .main_left_side_commentbox_2
+          | Discover The seamingless transaction experi
+          |  in no time.
+        //
+          <div class="main_left_side_button">
+          <div class="main_left_side_button_btn">Transact Now</div>
+          </div>
+        a.btn.btn-white(href='/customers' ) Transact Now
+      .main_right_side
+        //
+          <div class="main_right_side_row-1">
+          <img class="main_right_side_row-1_image_1" src="../Assets/image_1.svg" alt="image_1">
+          </div>
+          <div class="main_right_side_row-2"><img class="main_right_side_row-2_image_2Assets/Image_2.svg" alt="image_2"></div>
+          <div class="main_right_side_row-3"><img class="main_right_side_row-3_image_3Assets/image_3.svg" alt="image_3"></div>
+        .main_right_side_composition
+          img.main_right_side_composition__photo.main_right_side_composition__photo--p1(src='Assets/Image1.jpg', alt='image_1')
+          img.main_right_side_composition__photo.main_right_side_composition__photo--p2(src='Assets/Image2.jpg', alt='image_2')
+          img.main_right_side_composition__photo.main_right_side_composition__photo--p3(src='Assets/Image3.jpg', alt='image_3')

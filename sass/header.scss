@@ -1,0 +1,138 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  color: aliceblue;
+  position: relative;
+  overflow: hidden;
+  //width: 120rem;
+  height: 67.5rem;
+  background-size: 100% 100%;
+  background: radial-gradient(
+    49.72% 69.92% at 50% 9.13%,
+    #173852 0%,
+    #051c2e 100%
+  );
+}
+.uppergradient {
+  position: absolute;
+  left: -8rem;
+  top: -12rem;
+  z-index: -10;
+}
+.lowergradient {
+  position: absolute;
+  left: 25rem;
+  bottom: -0.625rem;
+  z-index: -10;
+}
+.header {
+  display: grid;
+  justify-items: center;
+  grid-template-rows: 4.375rem;
+  grid-template-columns: 3rem min-content max-content minmax(2rem, 1fr) min-content min-content min-content min-content 3rem;
+
+  border-bottom: 0.1875rem solid #203f58;
+  grid-column-gap: 1rem;
+  align-items: center;
+
+  &_logo {
+    width: 4.6875rem;
+    height: 4.6875rem;
+    grid-column: 2/3;
+    align-items: center;
+    transform: translateY(1.25rem);
+  }
+
+  &_name {
+    font-size: 2rem;
+    font-weight: 510;
+
+    transform: translate(-1.25rem, 0.375rem);
+  }
+  &_home {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: white;
+
+      transition: all 0.2s;
+    }
+    &:hover,
+    &:active {
+      color: #c9a750;
+      border-radius: 0.3125rem;
+      transform: scale(1.05);
+      box-shadow: 0 0.125rem 0.75rem rgba(#000, 0.2);
+    }
+    grid-column: 5/6;
+    justify-content: center;
+    padding: 0.3125rem 1rem;
+  }
+  &_transfer {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: white;
+
+      transition: all 0.2s;
+    }
+    &:hover,
+    &:active {
+      color: #c9a750;
+      border-radius: 0.3125rem;
+      transform: scale(1.1);
+      box-shadow: 0 0.125rem 0.75rem rgba(#000, 0.2);
+    }
+    grid-column: 6/7;
+    justify-content: center;
+    padding: 0.3125rem 1rem;
+  }
+  &_customers {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: white;
+
+      transition: all 0.2s;
+    }
+    &:hover,
+    &:active {
+      color: #c9a750;
+      border-radius: 0.3125rem;
+      transform: scale(1.1);
+      box-shadow: 0 0.125rem 0.75rem rgba(#000, 0.2);
+    }
+    grid-column: 7/8;
+    justify-content: center;
+    padding: 0.3125rem 1rem;
+  }
+  &_history {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: white;
+
+      transition: all 0.2s;
+    }
+    &:hover,
+    &:active {
+      color: #c9a750;
+      border-radius: 0.3125rem;
+      transform: scale(1.1);
+      box-shadow: 0 0.125rem 0.75rem rgba(#000, 0.2);
+    }
+    grid-column: 8/9;
+    justify-content: center;
+    padding: 0.3125rem 1rem;
+  }
+}
+.active {
+  border: 0.125rem solid #c9a750;
+  border-radius: 0.25rem;
+}
+
+@import "main";
+@import "_buttons";
+@import "customers";
+@import "profile";

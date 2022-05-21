@@ -1,0 +1,25 @@
+{
+  "name": "sparx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "scss": "node-sass --watch sass -o public/css",
+    "server": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "node-sass": "^7.0.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.3.3",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.7",
+    "pug": "^3.0.2"
+  }
+}

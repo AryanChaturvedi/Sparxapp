@@ -1,0 +1,102 @@
+.outerbox {
+  margin: 30px auto 50px;
+  max-width: 73%;
+  height: 73vh;
+  min-width: fit-content;
+
+  background: rgba(55, 89, 116, 0.2);
+  //   filter: blur(1px);
+  border-radius: 18px;
+  display: grid;
+  grid-template-rows: auto repeat(3, 1fr) 2rem;
+  padding: 2rem;
+
+  &_top {
+    display: grid;
+    grid-template-rows: auto max-content;
+    border-bottom: 3px solid #203f58;
+    &_allcustomers {
+      width: fit-content;
+      border-bottom: 2px solid #c9a750;
+      font-size: 24px;
+      margin-bottom: 1rem;
+
+      //   grid-row: 2/3;
+    }
+    &_table {
+      //   grid-row: 3/4;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(min-content, 1fr));
+      font-size: 22px;
+      grid-column-gap: 3rem;
+    }
+  }
+}
+.list {
+  display: grid;
+  grid-row-gap: 1rem;
+  margin: 1rem 0;
+  grid-row: 2/-1;
+  overflow-y: scroll;
+  height: 100%;
+  padding: 0 20px;
+
+  &_list-item {
+    color: whitesmoke;
+    font-size: initial;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 4rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    grid-template-columns: min-content repeat(5, minmax(min-content, 1fr));
+    font-size: 16px;
+    transition: all 0.2s;
+    &:hover {
+      transform: scale(1.03);
+      text-shadow: 0.5rem 1rem 2rem rgba(black, 0.2);
+      overflow-x: visible;
+    }
+  }
+  &_image {
+    width: 40px;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+  &_last_transaction_data {
+    display: grid;
+    grid-template-columns: min-content min-content;
+
+    &_circle {
+      margin: 0 3px;
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      border-radius: 50%;
+    }
+    &_circle_rcv {
+      margin: 0 3px;
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      border-radius: 50%;
+      background-color: green;
+    }
+    &_circle_send {
+      margin: 0 3px;
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      border-radius: 50%;
+      background-color: red;
+    }
+  }
+
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+.list::-webkit-scrollbar {
+  display: none;
+}

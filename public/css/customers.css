@@ -1,0 +1,82 @@
+.outerbox {
+  margin: 30px auto 50px;
+  max-width: 73%;
+  height: 73vh;
+  min-width: fit-content;
+  background: rgba(55, 89, 116, 0.2);
+  border-radius: 18px;
+  display: grid;
+  grid-template-rows: auto repeat(3, 1fr) 2rem;
+  padding: 2rem; }
+  .outerbox_top {
+    display: grid;
+    grid-template-rows: auto max-content;
+    border-bottom: 3px solid #203f58; }
+    .outerbox_top_allcustomers {
+      width: fit-content;
+      border-bottom: 2px solid #c9a750;
+      font-size: 24px;
+      margin-bottom: 1rem; }
+    .outerbox_top_table {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(min-content, 1fr));
+      font-size: 22px;
+      grid-column-gap: 3rem; }
+
+.list {
+  display: grid;
+  grid-row-gap: 1rem;
+  margin: 1rem 0;
+  grid-row: 2/-1;
+  overflow-y: scroll;
+  height: 100%;
+  padding: 0 20px;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none; }
+  .list_list-item {
+    color: whitesmoke;
+    font-size: initial;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 4rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    grid-template-columns: min-content repeat(5, minmax(min-content, 1fr));
+    font-size: 16px;
+    transition: all 0.2s; }
+    .list_list-item:hover {
+      transform: scale(1.03);
+      text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
+      overflow-x: visible; }
+  .list_image {
+    width: 40px;
+    border-radius: 50%;
+    padding: 1rem; }
+  .list_last_transaction_data {
+    display: grid;
+    grid-template-columns: min-content min-content; }
+    .list_last_transaction_data_circle {
+      margin: 0 3px;
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      border-radius: 50%; }
+    .list_last_transaction_data_circle_rcv {
+      margin: 0 3px;
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      border-radius: 50%;
+      background-color: green; }
+    .list_last_transaction_data_circle_send {
+      margin: 0 3px;
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+      border-radius: 50%;
+      background-color: red; }
+
+.list::-webkit-scrollbar {
+  display: none; }

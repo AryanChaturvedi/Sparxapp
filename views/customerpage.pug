@@ -1,0 +1,40 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Customers
+    link(rel='stylesheet', href='css/header.css')
+  body
+    img.uppergradient(src='Assets/uPPERGRADIENT.svg', alt='uppergradient')
+    img.lowergradient(src='Assets/Lovergradient.svg', alt='lowergradient')
+    // Header section
+    .header
+      .header_logo
+        img(src='Assets/Logo.svg', alt='Logo')
+      .header_name MONEY BANK
+      a.header_home(href='/') Home
+      a.header_transfer(href='/customers') Transfer
+      a.header_customers.active(href='/customers') Customers
+      a.header_history(href='#') Account
+    .outerbox
+      .outerbox_top
+        .outerbox_top_allcustomers All Customers
+        .outerbox_top_table
+          .cstmer Customers
+          .balencer Balence
+          .last_transaction Last transaction
+          .date Date
+          .Account_no Account No
+      .list
+        each x in data
+          a.list_list-item(href=`/customers/${x._id}`)
+            img.list_image(src=`../Assets/profile${x.user_id}.jpg`)
+            .profile= x.name 
+            .balence_data= `${x.Balance}$`
+            .list_last_transaction_data
+              div(class = "list_last_transaction_data_circle_"+ x.LastTransactionType ) sa
+              .last_transaction_data_ammount= x.LastTransactionAmount
+            .date= x.LastTransactionDate
+            .account= `AC: ${x.AcNo}`
