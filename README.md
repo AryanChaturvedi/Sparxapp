@@ -1,5 +1,5 @@
 # Sparxapp 
-###( Money Transfer bank webapp - app.js file)
+### ( Money Transfer bank webapp - app.js file)
 
 ![image](https://user-images.githubusercontent.com/77160352/206104161-8b8a93a7-6a03-4e9d-af95-9d0b70a459c8.png)
 
